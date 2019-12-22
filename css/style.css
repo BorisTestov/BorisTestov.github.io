@@ -1887,6 +1887,12 @@ img.svg{
 	display: none;
 	text-align: left;
 }
+.wrong_email{
+	color: #BD0A0D;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+}
 .arlo_tm_contact_wrap .contact_error{
 	color: rgba(255,0,4,1.00);
 	text-align: left;

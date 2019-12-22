@@ -491,23 +491,25 @@
 								<div class="rightbox">
 									<div class="arlo_tm_contact_wrap">
 										<div class="main_input_wrap">
-											<form action="/" method="post" class="contact_form" id="contact_form">
+											<form action="https://formspree.io/mpzqdavy" method="post" class="contact_form" id="contact_form">
 												<div class="returnmessage" data-success="Your message has been received, I will contact you soon."></div>
 												<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+												<div class="wrong_email"><span>Email address is incorrect</span></div>
 												<div class="wrap">
-													<input id="subject" type="text" placeholder="Subject">
+													<input id="subject" name="_subject" type="text" placeholder="Subject">
 												</div>
 												<div class="wrap">
-													<input id="name" type="text" placeholder="Your Name">
+													<input id="name" name= "_name" type="text" placeholder="Your Name">
 												</div>
 												<div class="wrap">
-													<input id="email" type="text" placeholder="Your Email">
+													<input id="email" type="text" pattern=".+@.+.*" size="30" required name="_replyto" placeholder="Your Email">
 												</div>
 												<div class="wrap">
-													<textarea id="message" placeholder="Your Message"></textarea>
-												</div>
+													<textarea id="message" name="message" placeholder="Your Message"></textarea>
+												</div> 
+												<input type="hidden" name="_next" value="http://www.the-boris.com#contact"/>
 												<div class="arlo_tm_button">
-													<a id="send_message" href="modal/contact.php"><span>Send Message</span></a>
+													<a id="send_message" type = "submit" href="#" onclick="validateForm()"><span>Send Message</span></a>
 												</div>
 											</form>
 										</div>
@@ -540,6 +542,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/init.js"></script>
 <script src="js/upload.js"></script>
+
 <!-- /SCRIPTS -->
 
 </body>
