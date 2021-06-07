@@ -1994,7 +1994,7 @@ img.svg{
 .arlo_tm_universal_box_wrap.particle{
 	height: 100vh;
 	position: relative;
-	background-image: url(..//img/hero/2.jpg);
+	background-image: url(..//img/hero/portrait.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -2018,7 +2018,7 @@ img.svg{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-image: url(..//img/hero/2.jpg);
+	background-image: url(..//img/hero/portrait.jpg);
 	position: relative;
 }
 .arlo_tm_ripple_wrap .overlay{
