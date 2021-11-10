@@ -1,3 +1,2 @@
 filename=archuefi1.sh
-curl -OL https://raw.githubusercontent.com/BorisTestov/arch/master/$filename
-sh $filename
+sh -c $(curl -fsSL https://raw.githubusercontent.com/BorisTestov/arch/master/$filename)
