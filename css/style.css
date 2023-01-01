@@ -400,7 +400,7 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-.arlo_tm_universal_box_wrap .overlay_image.hero{background-image: url(..//img/hero/background.jpg);}
+.arlo_tm_universal_box_wrap .overlay_image.hero{background-image: url(..//img/hero/background.webp);}
 .arlo_tm_universal_box_wrap .overlay_color.hero{background-color: rgba(7,23,55,.8);}
 .arlo_tm_universal_box_wrap .content.hero{height: 100vh;}
 .arlo_tm_hero_header_wrap .inner_content{
@@ -887,14 +887,14 @@ img.svg{
 	display:block;
 	text-align:left;
 }
-.arlo_tm_progress span.label{
+span.label{
 	font-size:13px;
 	font-weight:700;
 	color:#000;
 	font-family: "Montserrat";
 }
-.arlo_tm_progress span.label .experience{font-size: 12px;font-weight: 600;}
-.arlo_tm_progress span.number{
+span.label .experience{font-size: 12px;font-weight: 600;}
+span.number{
 	float:right;
 	font-size:13px;
 	color:#000;
@@ -913,9 +913,6 @@ img.svg{
 	height:100%;
 }
 .arlo_tm_progress .arlo_tm_bar_bg .arlo_tm_bar_wrap.open{
-	-webkit-animation: arlo_tm_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
-	-moz-animation:    arlo_tm_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
-	animation:         arlo_tm_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
 	width:100%;
 }
 .arlo_tm_progress .arlo_tm_bar_bg .arlo_tm_bar{
@@ -2089,3 +2086,73 @@ img.svg{
 	.arlo_tm_portfolio_list > li{width: 100%;padding-left: 0px;}
 	.arlo_tm_counter_wrap{padding: 94px 0px 48px 0px;}
 }
+
+
+
+/* Progress bar */
+progress {
+    display: block;
+	border: 0;
+	border-radius:50px;
+  }
+  
+  
+    /* Determinate: */
+
+    progress[value] {
+
+      	background:rgba(0,0,0,.1);
+		width:100%;
+		min-width:100%;
+		position:relative;
+		height:100%;
+    }
+    progress[value]::-webkit-progress-bar {
+		background:rgba(0,0,0,.1);
+		width:100%;
+		min-width:100%;
+		position:relative;
+		height:10%;
+		border-radius:100px;
+    }
+    progress[value]::-webkit-progress-value {
+		background:#000;
+		position:relative;
+		height:10px;
+		border-radius:100px;
+    }
+    progress[value]::-moz-progress-bar {
+		background:rgba(0,0,0,.1);
+		width:100%;
+		min-width:100%;
+		position:relative;
+		height:10%;
+		border-radius:100px;
+    }
+
+  .progress-element {
+	width: 200px;
+	margin: 0 0 10px;
+  }
+  
+  .progress-container {
+	position: relative;
+	background: #eee;
+	height: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+  }
+  
+  .progress-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background: turquoise;
+  }
+  
+
+  
+/* Progress bar end */

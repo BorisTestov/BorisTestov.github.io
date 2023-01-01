@@ -1,5 +1,0 @@
-# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
-PassengerAppRoot "/home/thebowir/python3.6"
-PassengerBaseURI "/hello"
-PassengerPython "/home/thebowir/virtualenv/python3.6/3.6/bin/python3.6"
-# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
