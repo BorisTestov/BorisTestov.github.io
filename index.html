@@ -204,19 +204,19 @@
 										<div class="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
 
 											<span class="label">Linux/Bash</span><span id="linux_years" class="number"></span>
-											<progress max="100" value="0" id="linux_exp"></progress>
+											<progress max="100" value="0" id="linux_exp" style="width:100%;display:block;"></progress>
 
+											<span class="label">Neural Networks</span><span id="nn_years" class="number"></span>
+											<progress max="100" value="0" id="nn_exp" style="width:100%;display:block;"></progress>
+											
 											<span class="label">Python</span><span id="python_years" class="number"></span>
-											<progress max="100" value="0" id="python_exp"></progress>
+											<progress max="100" value="0" id="python_exp" style="width:100%;display:block;"></progress>
 
 											<span class="label">C++</span><span id="cpp_years" class="number"></span>
-											<progress max="100" value="0" id="cpp_exp"></progress>
-											
-											<span class="label">Neural Networks</span><span id="nn_years" class="number"></span>
-											<progress max="100" value="0" id="nn_exp"></progress>
+											<progress max="100" value="0" id="cpp_exp" style="width:100%;display:block;"></progress>
 
 											<span class="label">Reverse Engineering</span><span id="reverse_years" class="number"></span>
-											<progress max="100" value="0" id="reverse_exp"></progress>
+											<progress max="100" value="0" id="reverse_exp" style="width:100%;display:block;"></progress>
 
 											<div>
 											</div>
@@ -330,8 +330,8 @@ function setExperienceForElement(startDate,endDate,expId, yearsId)
 function setValues() {
 	setExperienceForElement("9/1/2015", Date(), "linux_exp", "linux_years");
 	setExperienceForElement("9/1/2016", Date(), "python_exp", "python_years");
-	setExperienceForElement("6/1/2018", Date(), "cpp_exp", "cpp_years");
-	setExperienceForElement("9/1/2016", Date(), "nn_exp", "nn_years");
+	setExperienceForElement("6/1/2018", "1/1/2023", "cpp_exp", "cpp_years");
+	setExperienceForElement("9/1/2016", "1/1/2023", "nn_exp", "nn_years");
 	setExperienceForElement("6/1/2017", "6/1/2019", "reverse_exp", "reverse_years");
 
 	var yearsPassed = getAge("9/1/2015");
