@@ -1,4 +1,4 @@
-var GHPATH = '/boristestov.github.io';
+var GHPATH = '/';
 var APP_PREFIX = 'borisPWA';
 var VERSION = '0.1';
 var URLS = [    
