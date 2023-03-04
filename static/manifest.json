@@ -1,8 +1,7 @@
 {
   "name": "the-boris.com",
   "short_name": "the-boris",
-  "start_url": "/",
-  "id": "/boristestov.github.io/",
+  "start_url": "index.html",
   "theme_color": "#4287f5",
   "background_color": "#ffffff",
   "display": "standalone",
