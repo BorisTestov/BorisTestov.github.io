@@ -5,16 +5,56 @@
   "theme_color": "#4287f5",
   "background_color": "#ffffff",
   "display": "standalone",
+  "orientation": "any",
+  "shortcuts": [
+	{
+		"name": "Home screen",
+		"url": "/#home",
+		"description": "Home screen"	
+	},
+	{
+		"name": "About page",
+		"url": "/#about",
+		"description": "About page"	
+	},
+	{
+		"name": "Contacts page",
+		"url": "/#contact",
+		"description": "Contacts page"	
+	}
+  ],
   "icons":[
     {
-      "src":"img/icon/android-chrome-192x192.png",
+      "src":"img/icon/android-chrome-192x192.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp",
+      "purpose": "any"
     },
     {
-      "src":"img/icon/android-chrome-512x512.png",
+      "src":"img/icon/android-chrome-512x512.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp",
+      "purpose": "any"
     }
+  ],
+  "screenshots": [
+	{
+  		"src": "img/screenshots/home.webp",
+		"sizes": "1920x1080",
+		"type": "image/webp",
+		"label": "Home screen"
+	},
+	{
+  		"src": "img/screenshots/about.webp",
+		"sizes": "1920x1080",
+		"type": "image/webp",
+		"label": "About page"
+	},
+	{
+  		"src": "img/screenshots/contacts.webp",
+		"sizes": "1920x1080",
+		"type": "image/webp",
+		"label": "Contacts page"
+	}
   ]
 }
