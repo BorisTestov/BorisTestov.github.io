@@ -1,7 +1,12 @@
 {
   "name": "the-boris.com",
   "short_name": "the-boris",
-  "start_url": "../index.html",
+  "start_url": "index.html",
+  "description": "Boris's personal site",
+  "dir": "auto",
+  "lang": "en",
+  "scope": "https://the-boris.com",
+  "categories": ["business", "technology"],
   "theme_color": "#4287f5",
   "background_color": "#ffffff",
   "display": "standalone",
