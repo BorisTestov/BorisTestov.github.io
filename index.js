@@ -1,4 +1,4 @@
-async function start() {
+async function sw_register() {
 	if ("serviceWorker" in navigator) {
 	    // Register a service worker hosted at the root of the
 	    // site using the default scope.
@@ -10,28 +10,13 @@ async function start() {
 	            console.error(`Service worker registration failed: ${error}`);
 	        }
 	    );
-		const registration = await navigator.serviceWorker.ready;
-		// Check if periodicSync is supported
-	  	if ('periodicSync' in registration) {
-	    	// Request permission
-	    	const status = await navigator.permissions.query({
-	      		name: 'periodic-background-sync',
-	    	});
-	    	if (status.state === 'granted') {
-	      		try {
-	        		// Register new sync every 24 hours
-	        		await registration.periodicSync.register('data-sync', {
-	          			minInterval: 24 * 60 * 60 * 1000, // 1 day
-	        		});
-	        		console.log('Periodic background sync registered!');
-	      		} catch(e) {
-	        		console.error(`Periodic background sync failed:\n${e}`);
-	      		}
-	    	}
-	  	}
 	} else {
 	    console.error("Service workers are not supported.");
 	}
+}
+
+async function start() {
+	sw_register();
 }
 
 start();

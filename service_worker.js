@@ -49,10 +49,3 @@ self.addEventListener('fetch', (event) => {
         })());
     }
 });
-
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'data-sync') {
-    console.log('Fetching data in the background!');
-    event.waitUntil(fetchAndCacheNews());
-  }
-});
