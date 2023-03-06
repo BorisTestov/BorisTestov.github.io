@@ -10,6 +10,7 @@ async function start() {
 	            console.error(`Service worker registration failed: ${error}`);
 	        }
 	    );
+		const registration = await navigator.serviceWorker.ready;
 		// Check if periodicSync is supported
 	  	if ('periodicSync' in registration) {
 	    	// Request permission
