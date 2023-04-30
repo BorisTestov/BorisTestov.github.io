@@ -96,7 +96,7 @@
 										<h3><span>Boris Testov</span></h3>
 									</div>
 									<div class="text_typing">
-										<p><strong style='color:#E3872D;'>Software Engineer</strong></p>
+										<strong style='color:#E3872D;'><p id="role_1"></p></strong>
 									</div>
 								</div>
 							</div>
@@ -134,7 +134,7 @@
 										
 										<div class="definition">
 											   <p>Hi! My name is <b>Boris Testov</b>.
-												I am a <b>Software Engineer</b>, and I'm very passionate and dedicated to my work.
+												I am a <b><span id="role_2"></span></b>, and I'm very passionate and dedicated to my work.
 												With <b><script>document.write(getAge("9/1/2015"));</script> years experience</b>,
 												I have acquired the skills and knowledge necessary to <b>make your project a success</b>.
 												I enjoy every step of the development process, from discussion and collaboration
@@ -190,19 +190,22 @@
 					<div class="arlo_tm_skills_wrap">
 						<div class="container">
 							<div class="inner_wrap">
-								<div class="leftbox">
+								<div class="rightbox">
 									<div class="arlo_tm_mini_title_holder">
 										<h4>Some About my Skills</h4>
 									</div>
-									<p>Result-oriented Python/C++ programmer with <b><script>document.write(getAge("9/1/2015"));</script> years of experience</b>.
-										Developed many cool and cutting-edge systems.
-										My face-recognition system for a local coffee house <b>increase attendance by 48%</b>.
-										Developed processor module and plugins for IDA Pro <b>increase work productivity by 32%</b>.
-										Software Development is my passion so I never miss a chance to increase my skills
-										and participate in a new state-of-the-art project!
-									</p>
+									<p>Result-oriented <b><span id="role_3"></span></b> with <b><script>document.write(getAge("9/1/2015"));</script> years of experience</b>, specializing in creating innovative and cutting-edge systems.</p>
+										<br><b>Key achievements</b> include:
+										<li> Developed a face-recognition system for a local coffee house, resulting in <b>a 48% increase in attendance</b>. </li>
+										<li> <b>Enhanced work productivity by 32%</b> through implementing low-level optimizations. </li>
+										<li> <b>Reduced software bugs by 36%</b> by refining code quality and implementing robust testing procedures. </li>
+										<li> <b>Accelerated project completion by 28%</b> through efficient collaboration and effective time management strategies. </li>
+										<li> Transferred existing system to Docker using microservices architecture, <b>optimizing resource usage by 21%</b> and enhancing scalability. </li>
+										<li> Set up TeamCity for Continuous Integration, <b>reducing deployment time by 19%</b> and boosting overall development productivity. </li>
+									<br>
+									<p>With a passion for software development, I consistently seek opportunities to expand my skillset and contribute to groundbreaking projects!</p>
 								</div>
-								<div class="rightbox">
+								<div class="leftbox">
 									<div class="progress_bar_wrap_total">
 										<div class="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
 
@@ -217,9 +220,6 @@
 
 											<span class="label">C++</span><span id="cpp_years" class="number"></span>
 											<progress max="100" value="0" id="cpp_exp" style="width:100%;display:block;"></progress>
-
-											<span class="label">Reverse Engineering</span><span id="reverse_years" class="number"></span>
-											<progress max="100" value="0" id="reverse_exp" style="width:100%;display:block;"></progress>
 
 											<div>
 											</div>
@@ -331,11 +331,15 @@ function setExperienceForElement(startDate,endDate,expId, yearsId)
 }
 
 function setValues() {
+	var role = "Software Engineer";
+	document.getElementById("role_1").textContent = role;
+	document.getElementById("role_2").textContent = role;
+	document.getElementById("role_3").textContent = role;
+
 	setExperienceForElement("9/1/2015", Date(), "linux_exp", "linux_years");
 	setExperienceForElement("9/1/2016", Date(), "python_exp", "python_years");
 	setExperienceForElement("6/1/2018", "1/1/2023", "cpp_exp", "cpp_years");
 	setExperienceForElement("9/1/2016", "1/1/2023", "nn_exp", "nn_years");
-	setExperienceForElement("6/1/2017", "6/1/2019", "reverse_exp", "reverse_years");
 
 	var yearsPassed = getAge("9/1/2015");
 	var codelinesPerYear = 120 * 365;
