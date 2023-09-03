@@ -1,6 +1,12 @@
 RewriteEngine on
+
+# Force to use HTTPS
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+# Allow access to index.html
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteRule ^ - [F]
 
 # Block Russia
 
