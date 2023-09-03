@@ -1,26 +1,22 @@
 RewriteEngine on
 
+# Deny access to all
+Order deny,allow
+Deny from all
+
+# Allow access to index.html
+<Files "index.html">
+  Allow from all
+</Files>
+
+# Allow access to /resources folder
+<Directory "/path/to/your/resources">
+  Allow from all
+</Directory>
+
 # Force to use HTTPS
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-
-# Allow access to specific files
-<Files "index.html">
-    Order Allow,Deny
-    Allow from all
-</Files>
-
-# Grant access to all files within the resources folder
-<Directory "resources">
-    Order Allow,Deny
-    Allow from all
-</Directory>
-
-# Block access to all other files
-RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/index\.html$
-RewriteCond %{REQUEST_URI} !^/resources/
-RewriteRule ^ - [F]S
 
 # Block Russia
 
