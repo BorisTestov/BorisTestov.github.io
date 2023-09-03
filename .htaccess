@@ -4,9 +4,23 @@ RewriteEngine on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 
-# Allow access to index.html
+# Allow access to specific files
+<Files "index.html">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Grant access to all files within the resources folder
+<Directory "resources">
+    Order Allow,Deny
+    Allow from all
+</Directory>
+
+# Block access to all other files
+RewriteEngine On
 RewriteCond %{REQUEST_URI} !^/index\.html$
-RewriteRule ^ - [F]
+RewriteCond %{REQUEST_URI} !^/resources/
+RewriteRule ^ - [F]S
 
 # Block Russia
 
