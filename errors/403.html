@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Error - Access Denied</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .error-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .error-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .vpn-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .vpn-links li {
+            margin-bottom: 10px;
+        }
+
+        .vpn-link {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+	<h1 class="error-header">403 FORBIDDEN</h1>
+
+	<p class="error-message">
+		<strong style="color: #ff0000;">Access to this page is denied.</strong><br>
+		You may be trying to access the wrong page.<br>
+		<br>
+		If you're from a blocked country (<span style="color: #ff0000;">Russia</span>), you need to <strong>set up a VPN</strong> first. <br>
+		<em style="font-style: italic;">Here's how to set up a VPN connection (choose one).</em>
+	</p>
+
+        <ul class="vpn-links">
+            <li><a class="vpn-link" href="https://amnezia.org/ru">Amnezia VPN</a></li>
+            <li><a class="vpn-link" href="https://vpngen.org/ru/">VPN Generator</a></li>
+            <li><a class="vpn-link" href="https://www.torproject.org/ru/download/">TOR browser</a></li>
+	    <li><a class="vpn-link" href="mailto:boris.testov@gmail.com?subject=VPN%20Help">Email me directly; I'll help you set up.</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
