@@ -666,28 +666,36 @@ img.svg{
 
 }
 .arlo_tm_about_wrap .leftbox .about_image_wrap{position: relative;}
-.arlo_tm_about_wrap .leftbox .about_image_wrap .image{
-	position: absolute;
-	z-index: 2;
+
+.arlo_tm_about_wrap .leftbox .about_image_wrap .image {
+    position: relative; /* Relative positioning for proper alignment */
+    z-index: 2;
+    width: 100%; /* Ensure the image container takes the full width of its parent */
+    height: auto; /* Maintain aspect ratio */
 }
-.arlo_tm_about_wrap .leftbox .about_image_wrap .image .inner{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+
+.arlo_tm_about_wrap .leftbox .about_image_wrap .image .inner {
+    position: absolute; /* Absolute positioning to fill the container */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the container, potentially cropping */
+    background-position: center;
 }
-.arlo_tm_about_wrap .leftbox .about_image_wrap .border .inner{
-	position: absolute;
-	top: 25px !important;
-	bottom: -25px !important;
-	left: 25px !important;
-	right: -25px !important;
-	border: 10px solid #041230;
+
+.arlo_tm_about_wrap .leftbox .about_image_wrap .border .inner {
+    position: absolute;
+    top: 25px !important;
+    bottom: -25px !important;
+    left: 25px !important;
+    right: -25px !important;
+    border: 10px solid #041230;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
+
 .arlo_tm_about_wrap .leftbox .about_image_wrap img{opacity: 0;}
 .arlo_tm_about_wrap .rightbox{
 	width: 65%;
@@ -1991,7 +1999,6 @@ span.number{
 .arlo_tm_universal_box_wrap.particle{
 	height: 100vh;
 	position: relative;
-	background-image: url(..//img/hero/portrait.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -2015,7 +2022,6 @@ span.number{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-image: url(..//img/hero/portrait.jpg);
 	position: relative;
 }
 .arlo_tm_ripple_wrap .overlay{
@@ -2086,3 +2092,4 @@ span.number{
 	.arlo_tm_portfolio_list > li{width: 100%;padding-left: 0px;}
 	.arlo_tm_counter_wrap{padding: 94px 0px 48px 0px;}
 }
+
