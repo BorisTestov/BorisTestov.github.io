@@ -87,6 +87,14 @@
                 <a class="arlo_tm_resize" href="#"><i
                         class="xcon-angle-left"></i></a>
             </div>
+            <div style="position: relative; width: 100%; height: 400px; clear: both;">
+
+                <iframe align="bottom"
+                        style="position: absolute; bottom: 0; width: 100%; height: 60%; border: none; filter: invert(100%) hue-rotate(180deg) saturate(200%);"
+                        src="https://snowflake.torproject.org/embed.html" width="320" height="240"
+                        frameborder="0"
+                        scrolling="no"></iframe>
+            </div>
         </div>
         <!-- /LEFTPART -->
 
@@ -329,6 +337,12 @@
                                                       id="cpp_exp"
                                                       style="width:100%;display:block;"></progress>
 
+                                            <span class="label">Frontend</span><span
+                                                id="frontend_years"
+                                                class="number"></span>
+                                            <progress max="100" value="0"
+                                                      id="frontend_exp"
+                                                      style="width:100%;display:block;"></progress>
                                             <div>
                                             </div>
                                         </div>
@@ -437,6 +451,7 @@
         <a class="arlo_tm_totop" href="#"></a>
     </div>
 </div>
+
 <!-- / WRAPPER ALL -->
 
 <!-- SCRIPTS -->
@@ -474,6 +489,7 @@
         setExperienceForElement("9/1/2018", "1/1/2023", "cpp_exp", "cpp_years");
         setExperienceForElement("9/1/2019", Date(), "ci_exp", "ci_years");
         setExperienceForElement("9/1/2021", Date(), "micro_exp", "micro_years");
+        setExperienceForElement("2/1/2023", Date(), "frontend_exp", "frontend_years");
 
         var yearsPassed = getAge("9/1/2015");
         var codelinesPerYear = 120 * 365;
