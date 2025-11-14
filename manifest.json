@@ -1,31 +1,31 @@
 {
-  "name": "the-boris.com",
-  "short_name": "the-boris",
-  "start_url": "index.html",
-  "description": "Boris's personal site",
+  "name": "Boris Testov - Senior Software Engineer",
+  "short_name": "Boris Testov",
+  "start_url": "/",
+  "description": "Senior Software Engineer with 10 years building scalable backend systems in Python. Specialized in microservices, CI/CD workflows, and computer vision.",
   "dir": "auto",
   "lang": "en",
-  "scope": "https://the-boris.com",
-  "categories": ["business", "technology"],
-  "theme_color": "#4287f5",
-  "background_color": "#ffffff",
+  "scope": "/",
+  "categories": ["business", "technology", "portfolio"],
+  "theme_color": "#0a192f",
+  "background_color": "#0a192f",
   "display": "standalone",
   "orientation": "any",
   "shortcuts": [
 	{
-		"name": "Home screen",
-		"url": "/#home",
-		"description": "Home screen"	
-	},
-	{
-		"name": "About page",
+		"name": "About",
 		"url": "/#about",
-		"description": "About page"	
+		"description": "Learn more about Boris"
 	},
 	{
-		"name": "Contacts page",
+		"name": "Experience",
+		"url": "/#experience",
+		"description": "View work experience"
+	},
+	{
+		"name": "Contact",
 		"url": "/#contact",
-		"description": "Contacts page"	
+		"description": "Get in touch"
 	}
   ],
   "icons":[

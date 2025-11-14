@@ -1,500 +1,504 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]>
-<html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>
-<html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en"> <!--<![endif]-->
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boris Testov - Senior Software Engineer with 10 years building scalable backend systems in Python. Specialized in microservices, CI/CD workflows, and computer vision.">
+    <meta name="author" content="Boris Testov">
+    <meta name="keywords" content="Boris Testov, Software Engineer, Python, Docker, Microservices, CI/CD, FastAPI, Backend Developer">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="the-boris.com">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Cache-Control"
-          content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
+    <title>Boris Testov | Senior Software Engineer</title>
 
-    <title>The Boris</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="img/icon/favicon-32x32.webp" sizes="32x32">
+    <link rel="icon" type="image/webp" href="img/icon/favicon-16x16.webp" sizes="16x16">
+    <link rel="apple-touch-icon" href="img/icon/android-chrome-192x192.png">
 
-    <!-- STYLES -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="canonical" href="https://boristestov.github.io/"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i"
-          rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32"
-          href="img/icon/favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16"
-          href="img/icon/favicon-16x16.webp">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <![endif]-->
-    <!-- /STYLES -->
-    <script src="js/getAge.js"></script>
-    <script src="index.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => setValues());</script>
-    <script>
-        function getCurrentYear() {
-            var today = new Date();
-            return today.getFullYear();
-        }
-    </script>
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 1V3M10 17V19M19 10H17M3 10H1M16.364 16.364L14.95 14.95M5.05 5.05L3.636 3.636M16.364 3.636L14.95 5.05M5.05 14.95L3.636 16.364" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+    </button>
 
-<!-- WRAPPER ALL -->
-<div class="arlo_tm_wrapper_all">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>BT<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div id="arlo_tm_popup_blog">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-name">Boris Testov</h1>
+                <h2 class="hero-title">
+                    <span class="typing-prefix">&gt;_</span>
+                    <span id="typing-text" class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Senior Software Engineer with <strong><span id="years-experience-hero">10</span> years</strong> building scalable backend systems in Python.
+                    Specialized in microservices, CI/CD workflows, and computer vision while mentoring engineering teams.
+                </p>
+                <div class="hero-cta">
+                    <a href="Boris Testov.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-terminal">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-btn"></span>
+                        <span class="terminal-btn"></span>
+                        <span class="terminal-btn"></span>
+                        <span class="terminal-title">boris@portfolio ~ bash</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> cat skills.txt</p>
+                        <p class="terminal-output">Python • FastAPI • Django • Docker</p>
+                        <p class="terminal-output">Microservices • CI/CD • Linux</p>
+                        <p><span class="prompt">$</span> echo $LOCATION</p>
+                        <p class="terminal-output">Pafos, Cyprus 🇨🇾</p>
+                        <p><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="inner_popup scrollable"></div>
-        </div>
-        <span class="close"><a href="#"></a></span>
-    </div>
-
-    <!-- PRELOADER -->
-    <div class="arlo_tm_preloader">
-        <div class="spinner_wrap">
-            <div class="spinner"></div>
-        </div>
-    </div>
-    <!-- /PRELOADER -->
-
-    <!-- CONTENT -->
-    <div class="arlo_tm_content">
-
-        <!-- LEFTPART -->
-        <div class="arlo_tm_leftpart_wrap">
-            <div class="leftpart_inner">
-                <div class="menu_list_wrap">
-                    <ul class="anchor_nav">
-                        <br/>
-                        <br/>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact Me</a></li>
+            <h2 class="section-title">
+                <span class="section-number">01.</span> About Me
+                <span class="section-line"></span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Senior Software Engineer currently developing financial technology solutions at
+                        <strong>FinDev LLC</strong>, where I focus on building robust backend systems that handle
+                        critical financial calculations and reporting.
+                    </p>
+                    <p>
+                        My journey in software engineering spans over a decade, starting from my education in
+                        <strong>Mechatronics and Robotics at ITMO University</strong> in Saint-Petersburg.
+                        Throughout my career, I've evolved from building computer vision systems for vehicle tracking
+                        to leading cross-functional engineering teams and architecting scalable microservices platforms.
+                    </p>
+                    <p>
+                        I'm passionate about writing clean, maintainable code and mentoring team members to grow
+                        their technical skills. My expertise lies in Python backend development, with a strong
+                        focus on performance optimization, reliable CI/CD pipelines, and modern architectural patterns.
+                    </p>
+                    <ul class="about-list">
+                        <li>💼 <span id="years-experience">10</span> years of experience</li>
+                        <li>📍 Currently in Pafos, Cyprus</li>
+                        <li>🎓 ITMO University, Saint-Petersburg</li>
                     </ul>
                 </div>
-                <a class="arlo_tm_resize" href="#"><i
-                        class="xcon-angle-left"></i></a>
-            </div>
-
-        </div>
-        <!-- /LEFTPART -->
-
-        <!-- RIGHTPART -->
-        <div class="arlo_tm_rightpart">
-            <div class="rightpart_inner">
-                <div class="arlo_tm_section" id="home">
-                    <div class="arlo_tm_hero_header_wrap">
-                        <div class="arlo_tm_universal_box_wrap">
-                            <div class="bg_wrap">
-                                <div class="overlay_image hero jarallax"
-                                     data-speed="0.1"></div>
-                                <div class="overlay_color hero"></div>
-                            </div>
-                            <div class="content hero">
-                                <div class="inner_content">
-                                    <div class="image_wrap">
-                                        <img src="img/hero/portrait_squared.webp"
-                                             alt=""/>
-                                    </div>
-                                    <div class="name_holder">
-                                        <h3><span>Boris Testov</span></h3>
-                                    </div>
-                                    <div class="text_typing">
-                                        <strong style='color:#E3872D;'><p
-                                                id="role_1"></p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="arlo_tm_arrow_wrap bounce anchor">
-                                <a href="#about"><i
-                                        class="xcon-angle-double-down"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ABOUT -->
-                <div class="arlo_tm_section relative" id="about">
-                    <div class="arlo_tm_about_wrapper_all">
-                        <div class="container">
-                            <div class="arlo_tm_title_holder">
-                                <h3>About Me</h3>
-                                <span>Shortly about myself</span>
-                            </div>
-                            <div class="arlo_tm_about_wrap">
-                                <div class="author_wrap">
-                                    <div class="leftbox">
-                                        <div class="about_image_wrap parallax"
-                                             data-relative-input="true">
-                                            <div class="image layer"
-                                                 data-depth="0.1">
-                                                <img src="img/about/borders.webp"
-                                                     alt=""/>
-                                                <div class="inner"
-                                                     data-img-url="img/hero/portrait_squared.webp"></div>
-                                            </div>
-                                            <div class="border layer"
-                                                 data-depth="0.2">
-                                                <img src="img/about/borders.webp"
-                                                     alt=""/>
-                                                <div class="inner"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="rightbox">
-                                        <div class="arlo_tm_mini_title_holder">
-
-                                            <div class="definition">
-                                                <p>Hi! My name is <b>Boris
-                                                    Testov</b>.
-                                                    I am a <b><span
-                                                            id="role_2"></span></b>,
-                                                    and I'm very passionate and
-                                                    dedicated to my work.
-                                                    With <b>
-                                                        <script>document.write(getAge("9/1/2015"));</script>
-                                                        years experience</b>,
-                                                    I have acquired the skills
-                                                    and knowledge necessary to
-                                                    <b>make your project a
-                                                        success</b>.
-                                                    I enjoy every step of the
-                                                    development process, from
-                                                    discussion and
-                                                    collaboration
-                                                    to concept and execution,
-                                                    but I find the most
-                                                    satisfaction in seeing the
-                                                    finished product
-                                                    do everything for you that
-                                                    it was created to do.
-                                                </p>
-                                            </div>
-                                            <div class="about_short_contact_wrap">
-                                                <ul>
-                                                    <li>
-                                                        <span><label>Birthday: </label>09 Nov 1994</span>
-                                                    </li>
-                                                    <li>
-                                                        <span><label>GitLab: </label><a
-                                                                href="https://gitlab.com/BorisTestov">gitlab.com/BorisTestov</a></span>
-                                                    </li>
-                                                    <li>
-                                                        <span><label>Study: </label><a
-                                                                href="http://en.ifmo.ru/en/">ITMO University</a></span>
-                                                    </li>
-                                                    <li>
-                                                        <span><label>GitHub: </label><a
-                                                                href="https://github.com/BorisTestov">github.com/BorisTestov</a></span>
-                                                    </li>
-                                                    <li>
-                                                        <span><label>Mail: </label><a
-                                                                href="mailto:boris@the-boris.com">boris&#64;the-boris.com</a></span>
-                                                    </li>
-                                                    <li>
-                                                        <span><label>LinkedIn: </label><a
-                                                                href="https://www.linkedin.com/in/BorisTestov">linkedin.com/in/BorisTestov</a></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="buttons_wrap">
-                                                <ul>
-                                                    <li>
-                                                        <a href="resources/Boris Testov.pdf"
-                                                           target="_blank"
-                                                           rel="noopener noreferrer"
-                                                           download><span>Download CV</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ABOUT -->
-
-                <!-- SKILLS -->
-                <div id="skills" class="arlo_tm_section">
-                    <div class="arlo_tm_skills_wrap">
-                        <div class="container">
-                            <div class="inner_wrap">
-                                <div class="rightbox">
-                                    <div class="arlo_tm_mini_title_holder">
-                                        <h4>Some About my Skills</h4>
-                                    </div>
-                                    <p>As a dedicated <b><span
-                                            id="role_3"></span></b> with over
-                                        <b>
-                                            <script>document.write(getAge("9/1/2015"));</script>
-                                            years of experience</b>,
-                                        I thrive on creating innovative and
-                                        high-performance systems that push the
-                                        boundaries of technology.
-                                    </p>
-                                    <br><b>Key achievements</b> include:
-                                    <li><b>Backend Optimization:</b>
-                                        Significantly reduced backend response
-                                        times through asynchronous and
-                                        multithreaded programming.
-                                    </li>
-                                    <li><b>System Development:</b> Developed
-                                        and enhanced backend systems to ensure
-                                        robust functionality and high
-                                        performance.
-                                    </li>
-                                    <li><b>System Migration:</b> Successfully
-                                        migrated existing systems to a
-                                        Docker-based microservices
-                                        architecture, enhancing resource
-                                        utilization and scalability.
-                                    </li>
-                                    <li><b>Continuous Integration
-                                        Implementation:</b> Set up CI from
-                                        scratch on various platforms such as
-                                        GitHub, GitLab, TeamCity, and Travis,
-                                        significantly improving release times
-                                        and identifying bugs before release.
-                                    </li>
-                                    <li><b>Team Leadership:</b> Elevated team
-                                        productivity by leading and motivating
-                                        groups of employees through efficient
-                                        management strategies and targeted
-                                        professional development programs.
-                                    </li>
-                                    <br>
-                                    <p>Driven by a passion for software
-                                        development, I am always seeking new
-                                        challenges and opportunities to broaden
-                                        my expertise and contribute to
-                                        pioneering projects.</p>
-                                </div>
-                                <div class="leftbox">
-                                    <div class="progress_bar_wrap_total">
-                                        <div class="arlo_tm_progress_wrap"
-                                             data-size="small" data-round="c"
-                                             data-strip="off">
-                                            <div>
-                                                <b>
-                                                    Experience in Various
-                                                    Fields: <br><br>
-                                                </b>
-                                            </div>
-
-                                            <span class="label">Linux/Bash</span><span
-                                                id="linux_years"
-                                                class="number"></span>
-                                            <progress max="100" value="0"
-                                                      id="linux_exp"
-                                                      style="width:100%;display:block;"></progress>
-
-                                            <span class="label">CI/CD Tools </span><span
-                                                id="ci_years"
-                                                class="number"></span>
-                                            <progress max="100" value="0"
-                                                      id="ci_exp"
-                                                      style="width:100%;display:block;"></progress>
-
-                                            <span class="label">Microservices Architecture </span><span
-                                                id="micro_years"
-                                                class="number"></span>
-                                            <progress max="100" value="0"
-                                                      id="micro_exp"
-                                                      style="width:100%;display:block;"></progress>
-
-                                            <span class="label">Python</span><span
-                                                id="python_years"
-                                                class="number"></span>
-                                            <progress max="100" value="0"
-                                                      id="python_exp"
-                                                      style="width:100%;display:block;"></progress>
-
-                                            <span class="label">C++</span><span
-                                                id="cpp_years"
-                                                class="number"></span>
-                                            <progress max="100" value="0"
-                                                      id="cpp_exp"
-                                                      style="width:100%;display:block;"></progress>
-
-                                            <span class="label">Frontend</span><span
-                                                id="frontend_years"
-                                                class="number"></span>
-                                            <progress max="100" value="0"
-                                                      id="frontend_exp"
-                                                      style="width:100%;display:block;"></progress>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /SKILLS -->
-
-                <!-- COUNTERBOX -->
-                <div class="arlo_tm_section">
-                    <div class="container">
-                        <div class="arlo_tm_counter_wrap" data-col="3"
-                             data-delay="250">
-                            <ul class="arlo_tm_counter_list arlo_tm_miniboxes">
-                                <li>
-                                    <div class="inner arlo_tm_minibox"
-                                         style="height: auto;">
-                                        <h3><span><span
-                                                id="years_counterbox">0</span></span>
-                                        </h3><span>Years of Experience</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner arlo_tm_minibox"
-                                         style="height: auto;">
-                                        <h3><span><span
-                                                id="projects_counterbox">0</span></span>
-                                        </h3><span>Cutting edge projects</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner arlo_tm_minibox"
-                                         style="height: auto;">
-                                        <h3><span><span
-                                                id="code_counterbox">0</span></span>
-                                        </h3><span>Lines of code</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner arlo_tm_minibox"
-                                         style="height: auto;">
-                                        <h3><span><span id="coffee_counterbox">0</span></span>
-                                        </h3><span>Cups of coffee</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- /COUNTERBOX -->
-
-                <!-- CONTACT & FOOTER -->
-                <div class="arlo_tm_section" id="contact">
-                    <div class="container">
-                        <div class="arlo_tm_title_holder contact">
-                            <h3>Contact Me</h3>
-                            <span>Get in touch with me</span>
-                        </div>
-                    </div>
-                    <div class="arlo_tm_footer_contact_wrapper_all">
-                        <div class="arlo_tm_contact_wrap_all">
-                            <div class="container">
-                                <div class="arlo_tm_mini_title_holder contact">
-                                    <h4>Get in Touch</h4>
-                                </div>
-
-                                <div class="short_info_wrap">
-                                    <ul>
-                                        <p>I am open for various proposals.
-                                            Feel free to <a
-                                                    href="mailto:boris@the-boris.com">contact
-                                                me</a> if you have one, and
-                                            I will respond as soon as possible
-                                            to help turn even the most
-                                            challenging project into a great
-                                            success.
-                                            If you need a team player and
-                                            skilled
-                                            <strong>professional</strong>, you
-                                            need <strong>the Boris!</strong>
-                                        </p>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="arlo_tm_footer_wrap">
-                            <div class="container">
-                                <p>© Copyright
-                                    <script>document.write(getCurrentYear());</script>
-                                    . All Rights are Reserved.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /CONTACT & FOOTER -->
             </div>
         </div>
-        <!-- /RIGHTPART -->
-        <a class="arlo_tm_totop" href="#"></a>
-    </div>
-</div>
+    </section>
 
-<!-- / WRAPPER ALL -->
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> <span class="highlight">Recent</span> Work Experience
+                <span class="section-line"></span>
+            </h2>
 
-<!-- SCRIPTS -->
-<script src="js/jquery.js"></script>
-<!--[if lt IE 10]>
-<script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
-<script src="js/plugins.js"></script>
-<script src="js/init.js"></script>
+            <div class="timeline">
+                <!-- FinDev LLC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - Present</div>
+                        <div class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <h3 class="job-title">Software Engineer</h3>
+                                    <p class="job-company">FinDev LLC</p>
+                                </div>
+                                <button class="expand-btn" aria-label="Expand details">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Asyncio</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">CI/CD</span>
+                            </div>
+                            <div class="job-details">
+                                <ul class="job-achievements">
+                                    <li>Significantly improved response times through asynchronous programming and optimization</li>
+                                    <li>Delivered critical financial tools on schedule for analyst teams</li>
+                                    <li>Mentored team members on Python best practices and clean code principles</li>
+                                    <li>Established reliable CI/CD pipelines reducing deployment issues</li>
+                                    <li>Built robust backend systems handling financial calculations and reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<script language="javascript">
-    function updateDivById(id) {
-        var container = document.getElementById(id);
-        var content = container.innerHTML;
-        container.innerHTML = content;
-    }
-</script>
+                <!-- Protei LLC - Team Lead -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <div class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <h3 class="job-title">Development Team Lead</h3>
+                                    <p class="job-company">Protei LLC</p>
+                                </div>
+                                <button class="expand-btn" aria-label="Expand details">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Team Leadership</span>
+                                <span class="tech-tag">Agile</span>
+                                <span class="tech-tag">Mentoring</span>
+                                <span class="tech-tag">Process Design</span>
+                            </div>
+                            <div class="job-details">
+                                <ul class="job-achievements">
+                                    <li>Led cross-functional engineering team of 8 developers</li>
+                                    <li>Implemented structured goal-setting ensuring on-time project delivery</li>
+                                    <li>Developed systematic problem-solving processes improving team efficiency</li>
+                                    <li>Created professional development pathways and mentored team members</li>
+                                    <li>Improved communication between technical teams and executive leadership</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<script language="javascript">
-    function setExperienceForElement(startDate, endDate, expId, yearsId) {
-        var years_from_start = getAge("9/1/2015");
-        var diff = getAge(startDate) - getAge(endDate);
-        var relative_exp = parseInt(diff / years_from_start * 100);
-        document.getElementById(expId).setAttribute("value", relative_exp);
-        document.getElementById(yearsId).innerHTML = diff + " years of experience";
-    }
+                <!-- Protei LLC - CV Engineer -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2022</div>
+                        <div class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <h3 class="job-title">Computer Vision Engineer</h3>
+                                    <p class="job-company">Protei LLC</p>
+                                </div>
+                                <button class="expand-btn" aria-label="Expand details">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Microservices</span>
+                                <span class="tech-tag">TeamCity</span>
+                            </div>
+                            <div class="job-details">
+                                <ul class="job-achievements">
+                                    <li>Built video analytics systems for pedestrian and vehicle tracking</li>
+                                    <li>Developed ANPR system improving parking management efficiency</li>
+                                    <li>Modernized legacy systems using Docker and microservices architecture</li>
+                                    <li>Established CI/CD pipeline with TeamCity for automated deployments</li>
+                                    <li>Worked with C++, Python, OpenCV for computer vision applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    function setValues() {
-        var role = "Software Engineer";
-        document.getElementById("role_1").textContent = role;
-        document.getElementById("role_2").textContent = role;
-        document.getElementById("role_3").textContent = role;
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Skills & Technologies
+                <span class="section-line"></span>
+            </h2>
 
-        setExperienceForElement("9/1/2015", Date(), "linux_exp", "linux_years");
-        setExperienceForElement("9/1/2016", Date(), "python_exp", "python_years");
-        setExperienceForElement("9/1/2018", "1/1/2023", "cpp_exp", "cpp_years");
-        setExperienceForElement("9/1/2019", Date(), "ci_exp", "ci_years");
-        setExperienceForElement("9/1/2021", Date(), "micro_exp", "micro_years");
-        setExperienceForElement("2/1/2023", Date(), "frontend_exp", "frontend_years");
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        Languages
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-start="2015-09-01">
+                            <span class="tech-icon">🐍</span>
+                            <span class="tech-name">Python</span>
+                            <span class="tech-years">10 years</span>
+                        </div>
+                        <div class="tech-card" data-start="2015-09-01">
+                            <span class="tech-icon">💻</span>
+                            <span class="tech-name">Bash</span>
+                            <span class="tech-years">10 years</span>
+                        </div>
+                        <div class="tech-card" data-start="2017-01-01" data-end="2023-01-01">
+                            <span class="tech-icon">⚡</span>
+                            <span class="tech-name">C++</span>
+                            <span class="tech-years">6 years</span>
+                        </div>
+                    </div>
+                </div>
 
-        var yearsPassed = getAge("9/1/2015");
-        var codelinesPerYear = 120 * 365;
-        var coffeePerYear = 400;
-        var projectsPerYear = 1.5;
-        document.getElementById("years_counterbox").innerHTML = yearsPassed;
-        document.getElementById("code_counterbox").innerHTML = yearsPassed * codelinesPerYear;
-        document.getElementById("coffee_counterbox").innerHTML = yearsPassed * coffeePerYear;
-        document.getElementById("projects_counterbox").innerHTML = parseInt(yearsPassed * projectsPerYear);
-    };
-</script>
-<!-- /SCRIPTS -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        Frameworks & Tools
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-start="2019-01-01">
+                            <span class="tech-icon">🐳</span>
+                            <span class="tech-name">Docker</span>
+                            <span class="tech-years">6 years</span>
+                        </div>
+                        <div class="tech-card" data-start="2021-09-01">
+                            <span class="tech-icon">🎸</span>
+                            <span class="tech-name">Django</span>
+                            <span class="tech-years">3 years</span>
+                        </div>
+                        <div class="tech-card" data-start="2022-01-01">
+                            <span class="tech-icon">⚡</span>
+                            <span class="tech-name">FastAPI</span>
+                            <span class="tech-years">3 years</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        Architecture & DevOps
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-start="2015-09-01">
+                            <span class="tech-icon">🐧</span>
+                            <span class="tech-name">Linux</span>
+                            <span class="tech-years">10 years</span>
+                        </div>
+                        <div class="tech-card" data-start="2019-01-01">
+                            <span class="tech-icon">🏗️</span>
+                            <span class="tech-name">Microservices</span>
+                            <span class="tech-years">6 years</span>
+                        </div>
+                        <div class="tech-card" data-start="2019-01-01">
+                            <span class="tech-icon">🔄</span>
+                            <span class="tech-name">CI/CD</span>
+                            <span class="tech-years">6 years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">04.</span> Leadership & Mentoring
+                <span class="section-line"></span>
+            </h2>
+
+            <div class="leadership-content">
+                <div class="leadership-intro">
+                    <p>
+                        Beyond writing code, I'm passionate about building high-performing teams and fostering
+                        a culture of continuous improvement. My leadership philosophy centers on empowering
+                        team members through mentorship, clear communication, and systematic processes.
+                    </p>
+                </div>
+
+                <div class="leadership-grid">
+                    <div class="leadership-card">
+                        <div class="leadership-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Team Leadership</h3>
+                        <p>
+                            Led cross-functional engineering team of 8 developers,
+                            implementing agile methodologies and structured goal-setting to ensure
+                            consistent on-time project delivery.
+                        </p>
+                    </div>
+
+                    <div class="leadership-card">
+                        <div class="leadership-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3>Process Optimization</h3>
+                        <p>
+                            Developed systematic problem-solving processes that significantly improved
+                            team efficiency and code quality. Established CI/CD pipelines reducing
+                            deployment issues by 60%.
+                        </p>
+                    </div>
+
+                    <div class="leadership-card">
+                        <div class="leadership-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Technical Mentoring</h3>
+                        <p>
+                            Mentored team members on Python best practices, clean code principles,
+                            and architectural patterns. Created professional development pathways
+                            resulting in multiple team promotions.
+                        </p>
+                    </div>
+
+                    <div class="leadership-card">
+                        <div class="leadership-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Cross-Team Communication</h3>
+                        <p>
+                            Improved communication between technical teams and executive leadership,
+                            translating complex technical concepts into business value and ensuring
+                            alignment on strategic goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">05.</span> Get In Touch
+                <span class="section-line"></span>
+            </h2>
+
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm currently open to new opportunities and interesting projects. Whether you have a
+                    question, want to discuss a potential collaboration, or just want to say hi,
+                    feel free to reach out!
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:boris@the-boris.com" class="contact-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <h3>Email</h3>
+                        <p>boris@the-boris.com</p>
+                    </a>
+
+                    <a href="https://linkedin.com/in/boristestov" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <h3>LinkedIn</h3>
+                        <p>/in/boristestov</p>
+                    </a>
+
+                    <a href="https://github.com/BorisTestov" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path>
+                        </svg>
+                        <h3>GitHub</h3>
+                        <p>/BorisTestov</p>
+                    </a>
+                </div>
+
+                <div class="contact-cta">
+                    <a href="Boris Testov.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        Download Full Resume (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Boris Testov. Built with HTML, CSS, and JavaScript.</p>
+            <p class="footer-location">Pafos, Cyprus</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/calculations.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
